@@ -42,17 +42,18 @@
 						<div class="form-group">
 							<label>Nombre: </label><input type="text" name="nombre"
 								th:field="*{nombre}" class="form-control"
-								placeholder="Digite su nombre" required>
+								placeholder="Digite su nombre y apellido "  minlength="9" maxlength="40" required>
 						</div>
 						<div class="form-group">
-							<label>Documento: </label><input type="number" name="id"
+							<label>Documento: </label><input type="text" name="id"
 								th:field="*{id}" class="form-control"
-								placeholder="Digite su documento" required>
+								pattern="[0-9]+"
+								placeholder="Digite su documento" minlength="10"  maxlenght="11"  required>
 						</div>
 						<div class="form-group">
 							<label>e-mail: </label><input type="text" name="email"
 								th:field="*{email}" class="form-control"
-								placeholder="Digite su e-mail" required>
+								placeholder="Digite su e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  required>
 						</div>
 						<div class="form-group">
 							<label>Dirección: </label><input type="text" name="direccion"
@@ -62,12 +63,13 @@
 						<div class="form-group">
 							<label>Telefono: </label><input type="text" name="telefono"
 								th:field="*{telefono}" class="form-control"
-								placeholder="Digite su telefono" required>
+								pattern="[0-9]+"
+								placeholder="Digite su telefono" minlength="10"  maxlenght="11" required>
 						</div>
 						<div class="form-group">
 							<label>marca: </label><input type="text" name="marca"
 								th:field="*{marca}" class="form-control"
-								placeholder="Digite su marca" required>
+								placeholder="Digite su marca"  required>
 						</div>
 						<div class="form-group">
 							<label>Equipo: </label><input type="text" name="equipo"

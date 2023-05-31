@@ -9,12 +9,13 @@ public class user {
 	
 	@Id	
 	@Column(nullable=false)
+	
 	private long id;
 	
-	@Column(nullable= false, length= 50)// NOT NULL
+	@Column(nullable= false, length= 25)// NOT NULL
 	private String nombre;
 	
-	@Column(nullable=false, length=50)
+	@Column(nullable=false, length=25)
 	//@Email(message="por favor ingrese un correo valido. ")
 	private String email;
 	
@@ -24,13 +25,13 @@ public class user {
 	@Column(nullable=false, length=50)
 	private String direccion;
 	
-	@Column(nullable= false, length= 50)// NOT NULL
+	@Column(nullable= false, length= 25)// NOT NULL
 	private String marca;
 	
-	@Column(nullable=false, length=50)
+	@Column(nullable=false, length=25)
 	private String equipo;
 	
-	@Column(nullable=false, length=10)
+	@Column(nullable=false, length=25)
 	private String revisado;
 	
 	@Column(nullable=false, length=50)
