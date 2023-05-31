@@ -47,8 +47,7 @@ public class userControlador {
 	@RequestMapping(value="/guardar",method= RequestMethod.POST)
 	public String guardar(@ModelAttribute("formulario") user user) {
 		servicio.save(user);
-		//return"redirect:/";
-		return "home";
+		return"redirect:/";
 	}
 	
 	@RequestMapping("/editar/{id}") // metodo getter para thymeleaf
