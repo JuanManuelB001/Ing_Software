@@ -17,15 +17,15 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/"
-              >Home <span class="sr-only">(current)</span></a
-            >
+            <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/">Cliente</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/listarUsuarios">Usuarios</a>
+            <a class="nav-link" href="/listarUsuarios"
+              >Usuarios <span class="sr-only">(current)</span></a
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/info">Acerca de nosotros</a>
@@ -37,23 +37,31 @@
     <br />
     <!-- tabla contenedor -->
     <div class="container text-center">
+      <div class="col-3 p-0 ml-auto">
+        <button
+          class="btn btn-success w-100 mb-3"
+          onClick="window.location.assign('/crearUsuario')"
+        >
+          Crear Usuario
+        </button>
+      </div>
       <table class="table">
         <thead class="thead-dark">
           <tr>
-            <th scope="col">Marca del equipo</th>
-            <th scope="col">Tipo_Del_Equipo</th>
-            <th scope="col">Revisado_por</th>
-            <th scope="col">Observaciones</th>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Telefono</th>
             <!--  <th scope="col">ACCION</th> -->
           </tr>
         </thead>
-
         <tbody>
-          <tr th:each="equip : ${listaequipo}">
-            <td th:text="${equip.marca}"></td>
-            <td th:text="${equip.equipo}"></td>
-            <td th:text="${equip.revisado}"></td>
-            <td th:text="${equip.observacion}"></td>
+          <tr th:each="user : ${listUsuarios}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.email}"></td>
+            <td th:text="${user.phone}"></td>
+
             <!-- 
 					<td>
 						<a class="btn btn-primary" th:href="@{'/editar/' + ${user.id}}">Editar</a>
